@@ -33,6 +33,7 @@ app.use(router);
 function HDDID() {
 
     var res="";
+    console.log(si.uuid)
     si.blockDevices(function(data) {
         console.log(data)
         var propValue;
@@ -46,11 +47,16 @@ function HDDID() {
     return hddid;
     
 }
+
+
+si.system().then(data => console.log(data));
+
 app.listen(3000, function () {
 
 console.log("Node server running on http://localhost:3000");
+//console.log(si.uuid)
 
 //console.log(cpuid);
-HDDID()
-console.log(serialNumber);
+//HDDID()
+//console.log(serialNumber);
 });
