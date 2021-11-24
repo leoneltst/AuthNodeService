@@ -21,12 +21,15 @@ var router = express.Router();
 var hddid="HDDexample";
 router.get("/", function (req, res) {
     //HDDID();
-
-    var response={
-        "HDD":HDDID()//,
-        //"CPU":cpuid
-    }
-    res.send(response);
+    fs.readFile('/test.txt', 'utf8' , (err, data) => {
+        if (err) {
+          console.error(err)
+          return
+        }
+        console.log(data)
+        
+    res.send(data.toString());
+      })
 });
 
 app.use(router);
@@ -65,7 +68,7 @@ console.log("Node server running on http://localhost:3000");
 //console.log(process)
 
 console.log("-------------------------------------------------------")
-console.log("My geteuid:"+process.geteuid())
+console.log("My geteuid:"+process.geteuid().toString())
 
 
 
