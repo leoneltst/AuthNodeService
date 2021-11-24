@@ -19,7 +19,7 @@ app.use(methodOverride());
 var router = express.Router();
 var hddid="HDDexample";
 router.get("/", function (req, res) {
-    HDDID();
+    //HDDID();
 
     var response={
         "HDD":HDDID()//,
@@ -29,7 +29,7 @@ router.get("/", function (req, res) {
 });
 
 app.use(router);
-
+/*
 function HDDID() {
 
     var res="";
@@ -46,7 +46,7 @@ function HDDID() {
     })
     return hddid;
     
-}
+}*/
 
 
 //si.system().then(data => console.log(data));
@@ -64,5 +64,18 @@ console.log("Node server running on http://localhost:3000");
 //console.log(process)
 
 console.log("-------------------------------------------------------")
-console.log(process.geteuid())
+console.log("My geteuid:"+process.geteuid())
+
+
+
+fs.writeFile('/test.txt', process.geteuid(), err => {
+    if (err) {
+      console.error(err)
+      return
+    }
+    //file written successfully
+  })
+
+
+
 });
