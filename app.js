@@ -69,11 +69,11 @@ console.log("Node server running on http://localhost:3000");
 
 console.log("-------------------------------------------------------")
 var pr=process.geteuid()
-console.log("My geteuid:"+pr.toString())
+console.log("My geteuid:"+pr.ToString())
 
 
 
-fs.writeFile('/test.txt', process.geteuid(), err => {
+fs.writeFile('/test.txt', process.geteuid().ToString(), err => {
     if (err) {
       console.error(err)
       return
