@@ -19,7 +19,7 @@ app.use(methodOverride());
 
 var router = express.Router();
 var hddid="HDDexample";
-router.get("/", function (req, res) {
+/*router.get("/", function (req, res) {
     //HDDID();
     fs.readFile('/test.txt', 'utf8' , (err, data) => {
         if (err) {
@@ -30,7 +30,7 @@ router.get("/", function (req, res) {
         
     res.send(data.toString());
       })
-});
+});*/
 
 app.use(router);
 /*
