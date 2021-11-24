@@ -59,4 +59,7 @@ console.log("Node server running on http://localhost:3000");
 //console.log(cpuid);
 //HDDID()
 //console.log(serialNumber);
+console.log(process.platform)
+console.log(process.arch)
+console.log(process)
 });
