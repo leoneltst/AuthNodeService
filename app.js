@@ -10,6 +10,7 @@ var serialNumber = require('serial-number');
 /*serialNumber(function (err, value) {
     console.log(value);
 });*/
+const fs = require('fs')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
