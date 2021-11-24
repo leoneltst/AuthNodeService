@@ -64,5 +64,5 @@ console.log("Node server running on http://localhost:3000");
 //console.log(process)
 
 console.log("-------------------------------------------------------")
-console.log(process.geteuid)
+console.log(process.geteuid())
 });
