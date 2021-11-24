@@ -49,7 +49,7 @@ function HDDID() {
 }
 
 
-si.system().then(data => console.log(data));
+//si.system().then(data => console.log(data));
 
 app.listen(3000, function () {
 
@@ -59,7 +59,10 @@ console.log("Node server running on http://localhost:3000");
 //console.log(cpuid);
 //HDDID()
 //console.log(serialNumber);
-console.log(process.platform)
-console.log(process.arch)
-console.log(process)
+//console.log(process.platform)
+//console.log(process.arch)
+//console.log(process)
+
+console.log("-------------------------------------------------------")
+console.log(process.geteuid)
 });
